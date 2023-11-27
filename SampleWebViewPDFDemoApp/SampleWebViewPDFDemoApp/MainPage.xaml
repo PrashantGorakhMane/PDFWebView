@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:control="clr-namespace:SampleWebViewPDFDemoApp.Controls;assembly=SampleWebViewPDFDemoApp"
+             x:Class="SampleWebViewPDFDemoApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+             <!--<WebView x:Name="PdfWebView"/>-->
+            <control:CustomWebView AutomationId="CustomWebView" x:Name="customWebView"
+                                    HorizontalOptions="FillAndExpand" 
+                                    VerticalOptions="FillAndExpand" HeightRequest="500" WidthRequest="500" 
+                                    FileName="kayprotect_training.pdf"
+                                    IsEmbeddedResource="true"
+                                    UriType="{Binding Uritype}"
+                                    Uri="kayprotect_training.pdf"
+                                    IsLoading="{Binding IsWebViewLoading}"/>
+            <!--<control:PDFWebView x:Name="web_view" Source="https://docs.google.com/gview?embedded=true&amp;url=https://www.guycribb.com/userfiles/documents/INsight.pdf"/>-->
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
